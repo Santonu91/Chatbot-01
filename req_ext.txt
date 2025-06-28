@@ -1,0 +1,20 @@
+#Upgraded
+
+# Core libraries
+#sentence-transformers==2.2.2
+#faiss-cpu==1.7.3
+##torch==2.0.1
+transformers==4.30.2
+
+# For reading spreadsheets and CSV files
+#pandas==2.0.3
+#openpyxl==3.1.2
+
+# For HTTP requests (if using requests to call Gemini API)
+#requests==2.31.0
+
+# For web app frontend
+#streamlit==1.24.1
+
+# Optional: if you use dotenv for environment variables
+#python-dotenv==1.0.0

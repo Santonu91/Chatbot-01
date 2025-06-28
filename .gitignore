@@ -1,0 +1,18 @@
+keys.txt
+Notes.md
+# FAISS index files if saved locally
+*.index
+
+
+# Streamlit local config and cache files
+.streamlit/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
