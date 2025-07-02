@@ -1,0 +1,23 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.29.177:8501
+
+  Stopping...
+  Stopping...
+Exception ignored in: <module 'threading' from 'C:\\Users\\santo\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\threading.py'>
+Traceback (most recent call last):
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1624, in _shutdown
+    lock.acquire()
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\site-packages\streamlit\web\bootstrap.py", line 43, in signal_handler
+    server.stop()
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\site-packages\streamlit\web\server\server.py", line 458, in stop
+    self._runtime.stop()
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\site-packages\streamlit\runtime\runtime.py", line 324, in stop
+    async_objs.eventloop.call_soon_threadsafe(stop_on_eventloop)
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 840, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Users\santo\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

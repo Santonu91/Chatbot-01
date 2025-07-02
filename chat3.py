@@ -10,7 +10,9 @@ genai.configure()
 model = genai.GenerativeModel("gemini-2.5-flash")
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
-st.title("📚 Smart Document Chatbot (Gemini + FAISS)")
+#st.title("📚 Smart Document Chatbot (Gemini + FAISS)")
+st.title("📚 Smart Document Chatbot ")
+
 
 # Session state to keep index and data
 if 'index' not in st.session_state:
