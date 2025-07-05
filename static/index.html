@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Story Q&A</title>
+</head>
+<body>
+  <h1>Ask about the story</h1>
+
+  <input type="text" id="question" placeholder="Enter your question" style="width: 300px;" />
+  <button onclick="askQuestion()">Ask</button>
+
+  <h3>Answer:</h3>
+  <p id="answer"></p>
+
+  <script>
+    async function askQuestion() {
+      const questionInput = document.getElementById('question');
+      const answerP = document.getElementById('answer');
+
+      const query = questionInput.value;
+      if (!query) {
+        answerP.textContent = 'Please enter a question.';
+        return;
+      }
+
+      answerP.textContent = 'Thinking...';
+
+      try {
+        const response = await fetch('http://localhost:8000/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query }),
+        });
+
+        if (!response.ok) {
+          answerP.textContent = 'Error: ' + response.statusText;
+          return;
+        }
+
+        const data = await response.json();
+        answerP.textContent = data.answer || 'No answer returned.';
+      } catch (error) {
+        answerP.textContent = 'Error: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
